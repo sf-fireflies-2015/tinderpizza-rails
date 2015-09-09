@@ -29,14 +29,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 gem 'unicorn'
-gem 'rack-timeout'
+
+group :production do
+  gem 'rack-timeout'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rspec-rails'
 end
 

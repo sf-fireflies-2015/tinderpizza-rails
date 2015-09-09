@@ -1,3 +1,14 @@
-<div class="pizza">
-<%= link_to pizza.name, pizza %>
+<div class="col s6 m3">
+  <div class="card small">
+    <div class="card-image">
+     <img src="<%= image_path('pizza.jpg') %>" alt="" class="circle">
+      <span class="card-title"><%= pizza.name %></span>
+    </div>
+    <div class="card-content">
+      <p><%= number_to_currency pizza.price %></p>
+    </div>
+    <div class="card-action">
+      <a href="/pizzas/<%= pizza.id %>">Details</a>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,15 @@
-<h1>Pizzas</h1>
+<h1>All Pizzas</h1>
+
+<% if true || auth_logged_in? %>
+  <div class="row">
+    <div class="col s12">
+      <a class="btn" id="new-pizza-form-container-button" href="/pizzas/new">New Pizza</a>
+    </div>
+    <!-- Hidden Div for our form -->     
+    <div id="new-pizza-form-container" class="col s12" style="display: none;"></div>
+  </div>
+<% end %>
+
+<div id="pizzas" class="row">
 <%= render @pizzas %>
-
-
-
+</div>

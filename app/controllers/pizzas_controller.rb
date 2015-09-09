@@ -1,5 +1,10 @@
 class PizzasController < ApplicationController
   def new
+    @pizza = Pizza.new
+  end
+
+  def edit
+    @pizza = Pizza.find(params[:id])
   end
 
   def index
@@ -14,7 +19,6 @@ class PizzasController < ApplicationController
   end
 
   def create
-    debugger
     @pizza = Pizza.new(pizza_params)
     if @pizza.save
        redirect_to @pizza

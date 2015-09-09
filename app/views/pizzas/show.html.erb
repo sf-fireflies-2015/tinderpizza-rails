@@ -1,2 +1,22 @@
-<h1><%= @pizza.name %></h1>
-<p>Find me in app/views/pizzas/show.html.erb</p>
+<div class="card large">
+  <div class="card-image">
+   <img src="<%= image_path('pizza.jpg') %>" alt="" class="circle">
+    <span class="card-title"><%= @pizza.name %></span>
+  </div>
+  <div class="card-content">
+    <p><%= number_to_currency @pizza.price %></p>
+    <p><%= @pizza.diameter %></p>
+  </div>
+  <div class="card-action">
+    <a id="new-topping-form-container-button" href="/pizzas/<%= @pizza.id %>/toppings/new">Add Topping</a>
+    <a href="/pizzas/<%= @pizza.id %>/edit">Edit</a>
+    <a class="post_link" data-form-id="#post_form" data-confirm="Are you sure?" href="/pizzas/<%= @pizza.id %>/delete">Delete</a>
+   </div>
+</div>
+
+
+
+
+<%# Hidden form for Delete Post via link %>
+<form id="post_form" class="hide" action="" method="post"></form>
+
