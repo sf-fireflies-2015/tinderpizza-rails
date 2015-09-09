@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Pizza.find_or_create_by!(name: 'Zoe Special', price: 9999)
+Pizza.find_or_create_by!(name: 'Veggie Delight', price: 999, diameter: 10)
